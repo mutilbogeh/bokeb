@@ -11,6 +11,7 @@ import { Metadata, ResolvingMetadata } from "next";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { humanDuration, humanSize } from "@/lib/utils";
 import { SITENAME } from "@/lib/constants";
+import Script from "next/script";
 
 import { Button } from "@/components/ui/button";
 import CopyButton from "@/components/copy-button";
@@ -39,7 +40,7 @@ export async function generateMetadata(
     }
 
     const file = data.result[0];
-    const title = `${file.title} - ${SITENAME}`;
+    const title = `${file.title}`;
     const description = `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`;
     const image = file.splash_img;
     const previousOgImages = (await parent).openGraph?.images || [];
@@ -84,7 +85,7 @@ export default async function Video({ params }: PageProps) {
         const jsonLd2 = {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        headline: `${file.title} - ${SITENAME}`,
+        headline: `${file.title}`,
         image: file.splash_img,
         description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
         url: `https://bokeb.pages.dev/v/${file.filecode}`,
@@ -112,7 +113,7 @@ export default async function Video({ params }: PageProps) {
         const jsonLd3 = {
             '@context': 'https://schema.org', 
             '@type': 'Book', 
-            'name': `${file.title} - ${SITENAME}`, 
+            'name': `${file.title}`, 
             'aggregateRating': {
             '@type': 'AggregateRating',	
                 'ratingValue': '5',	
@@ -136,7 +137,7 @@ export default async function Video({ params }: PageProps) {
         </section>
             <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
-                src={`https://ds2play.com/e/${file.filecode}`}
+                src={`https://doodstream.com/e/${file.filecode}`}
                 scrolling="no"
                 title={file.title}
                 frameBorder={0}
@@ -153,6 +154,7 @@ export default async function Video({ params }: PageProps) {
             <h2 className="text-2xl font-bold text-center my-4">
                 Related Video {file.title}
             </h2>
+<Script src="https://js.juicyads.com/jp.php?c=947403z2v256s2x2w2e4z2e4&u=http%3A%2F%2Fwww.juicyads.rocks"/>
             <SearchCardList query={file.title.split(" ")[2]} />
 <p>Video bokep indo terbaru viral korea china tante live paksa ngentot abg cewek pelajar pijat Hijab Abg Colmek Film Tante Hot Twitter Asia Download Live stw situs indonesia nonton link sd crot playbokep simontok bokepin montok baru perawan anak kecil telegram selingkuh ojol cantik gay vidio lokal artis pelajar Video Bokep indo jepang indonesia barat viral bokep video terbaru bocil bokepindo korea jilbab smp japan ama sub sma jav cina japanese anime hijab abg colmek film tante twitter asia china rusia no sensor hot arab india download live stw thailand situs hd nonton link baru mom montok telegram perawan sd anak kecil crot bokepindoh selingkuh cantik ojol lokal vidio gay asian anime amerika hentai artis streaming pelajar janda Video Bokep indo jepang indonesia barat viral bokep video terbaru bocil bokepindo korea jilbab smp japan ama sub sma jav cina japanese anime hijab abg colmek film tante twitter asia china rusia no sensor hot arab india download live stw thailand situs hd nonton link baru mom montok telegram perawan sd anak kecil crot bokepindoh selingkuh cantik ojol lokal vidio gay asian anime amerika hentai artis streaming pelajar janda hub sotwe olmek avtube pijat pure gudang pemerkosaan rumah tobrut inggris ngintip vcs binor yandex update remaja {file.title} wiki raja bokeptube full porno bokepmama simontok bokepind playbokep indobokep xpanasonline indoh</p>
         </div>
