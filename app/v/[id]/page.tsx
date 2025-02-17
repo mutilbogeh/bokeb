@@ -60,14 +60,6 @@ export default async function Video({ params }: PageProps) {
                 '@type': 'Person',
                 name: 'admin',
                 url: 'https://abgsquirt.pages.dev'},
-        interactionStatistic: {
-            '@type': `InteractionCounter`,
-                userInteractionCount: `${file.file_views}`,
-            interactionType: {
-                '@type': `ReadAction`,
-                target: `https://abgsquirt.pages.dev/v/${file.file_code}`
-            }  
-        }
         }
     return (
         <div className="grid col-span-full gap-4 md:gap-4 md:mx-10" itemProp="video" itemScope itemType="http://schema.org/VideoObject">
