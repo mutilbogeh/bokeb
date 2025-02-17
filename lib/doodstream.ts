@@ -79,11 +79,11 @@ class Doodstream {
         return data;
     }
 
-    async search({ title }: { title: string }) {
+    async search({ query }: { query: string }) {
         const data = await this.fetch(
             "/file/list",
-            { per_page: per_page.toString(),}
-            { search_term: title },
+            { per_page: 20,}
+            { search_term: query },
             60
         );
         return data;
