@@ -28,5 +28,7 @@ export default async function Video({ params }: PageProps) {
         );
     }
         const file = data.result[0];
-    return console.log();
+    return (
+        <div className="grid col-span-full gap-4 md:gap-4 md:mx-10" itemProp="video" itemScope itemType="http://schema.org/VideoObject">
+            );
 }
