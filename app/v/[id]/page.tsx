@@ -39,7 +39,7 @@ export async function generateMetadata(
         twitter: {
             title,
             description,
-            images: {`${file.player_img}`},
+            images: `${file.player_img}`,
         },
         openGraph: {
             title,
