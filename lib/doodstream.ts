@@ -81,7 +81,7 @@ class Doodstream {
 
     async search({ query }: { query: string }) {
         const data = await this.fetch(
-            "/search/videos",
+            "/file/list",
             { search_term: query },
             60
         );
