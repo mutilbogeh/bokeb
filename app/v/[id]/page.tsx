@@ -135,8 +135,6 @@ export default async function Video({ params }: PageProps) {
         />
         {/* ... */}
         </section>
-
-            {file.file_title} di {SITENAME} {file.file_created} {file.file_code} {file.player_img}
                         <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
                 src={`https://filemoon.to/e/${file.file_code}`}
