@@ -82,6 +82,7 @@ class Doodstream {
     async search({ title }: { title: string }) {
         const data = await this.fetch(
             "/file/list",
+            { per_page: per_page.toString(),}
             { search_term: title },
             60
         );
