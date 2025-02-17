@@ -35,9 +35,6 @@ export default async function Video({ params }: PageProps) {
         image: file.player_img,
         description: `${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`,
         url: `https://abgsquirt.pages.dev/v/${file.file_code}`,
-        datePublished: new Date(
-            file.file_created + ".000Z"
-        ).toISOString(),
         publisher: {
             '@type': 'Organization',
             name: `${SITENAME}`,
@@ -55,9 +52,6 @@ export default async function Video({ params }: PageProps) {
         image: file.player_img,
         description: `${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`,
         url: `https://abgsquirt.pages.dev/v/${file.file_code}`,
-        datePublished: new Date(
-            file.file_created + ".000Z"
-        ).toISOString(),
         publisher: {
             '@type': 'Organization',
             name: `${SITENAME}`,
@@ -83,9 +77,6 @@ export default async function Video({ params }: PageProps) {
 <meta itemProp="duration" content="P0DT0H8M43S" />
 <meta itemProp="thumbnailUrl" content={`${file.player_img}`} />
 <meta itemProp="embedURL" content={`https://filemoon.to/e/${file.file_code}`} />
-<meta itemProp="uploadDate" content={`${new Date(
-            file.file_created + ".000Z"
-        ).toISOString()}`} />
 	<section>
         {/* Add JSON-LD to your page */}
         <script
