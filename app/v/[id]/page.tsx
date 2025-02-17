@@ -29,9 +29,6 @@ export async function generateMetadata(
     const file = data.result[0];
     const title = `${file.file_title}`;
     const description = `${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`;
-    const image = file.splash_img;
-    const previousOgImages = (await parent).openGraph?.images || [];
-    const previousTwImages = (await parent).twitter?.images || [];
 
     return {
         title,
