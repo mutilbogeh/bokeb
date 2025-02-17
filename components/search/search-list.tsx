@@ -35,7 +35,6 @@ const SearchCardList = async ({
                         );
                     })}
                 </div>
-        <Paginate total={data.result.results_total} current=1></Paginate>
             ) : (
                 <MessageBox title="No results found" variant="info">
                     <p className="text-center">Try a shorter search term.</p>
