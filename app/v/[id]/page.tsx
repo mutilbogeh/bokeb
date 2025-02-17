@@ -39,12 +39,12 @@ export async function generateMetadata(
         twitter: {
             title,
             description,
-            images: [...previousTwImages, image],
+            images: {`${file.player_img}`},
         },
         openGraph: {
             title,
             description,
-            images: [...previousOgImages, image],
+            images: {`${file.player_img}`},
             url: `/v/${file.file_code}`,
             type: `article`,
         },
