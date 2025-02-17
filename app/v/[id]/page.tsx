@@ -47,11 +47,11 @@ export async function generateMetadata(
             title,
             description,
             images: [...previousOgImages, image],
-            url: `/v/${file.filecode}`,
+            url: `/v/${file.file_code}`,
             type: `article`,
         },
         alternates: {
-            canonical: `/v/${file.filecode}`,
+            canonical: `/v/${file.file_code}`,
         },
     };
 }
@@ -73,7 +73,7 @@ export default async function Video({ params }: PageProps) {
 <div className="grid col-span-full gap-4 md:gap-4 md:mx-10">
             <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
-                src={`https://filemoon.to/e/${file.filecode}`}
+                src={`https://filemoon.to/e/${file.file_code}`}
                 scrolling="no"
                 title={file.file_title}
                 frameBorder={0}
