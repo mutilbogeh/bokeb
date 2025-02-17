@@ -16,7 +16,7 @@ export default function Error({
     }, [error]);
 
     return (
-        <MessageBox title={error.message} countdown={1}>
+        <MessageBox title={error.message} countdown={100}>
             <Button onClick={reset}>Try Again</Button>
         </MessageBox>
     );
