@@ -100,5 +100,4 @@ export default async function Video({ params }: PageProps) {
 <Script src="https://js.juicyads.com/jp.php?c=947403z2v256s2x2w2e4z2e4&u=http%3A%2F%2Fwww.juicyads.rocks"/>
             <SearchCardList query={file.file_title.split(" ")[2]} />
         </div>
-    );
 }
