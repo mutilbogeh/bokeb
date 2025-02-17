@@ -42,7 +42,7 @@ export async function generateMetadata(
     const file = data.result[0];
     const title = `${file.title}`;
     const description = `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`;
-    const image = file.splash_img;
+    const image = file.thumbnail;
     const previousOgImages = (await parent).openGraph?.images || [];
     const previousTwImages = (await parent).twitter?.images || [];
 
@@ -86,7 +86,7 @@ export default async function Video({ params }: PageProps) {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: `${file.title}`,
-        image: file.splash_img,
+        image: file.thumbnail,
         description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
         url: `https://bokeb.pages.dev/v/${file.filecode}`,
         datePublished: new Date(
@@ -137,7 +137,7 @@ export default async function Video({ params }: PageProps) {
         </section>
             <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
-                src={`https://dood.pm/e/${file.filecode}`}
+                src={`https://filemoon.to/e/${file.filecode}`}
                 scrolling="no"
                 title={file.title}
                 frameBorder={0}
