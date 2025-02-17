@@ -71,7 +71,7 @@ export default async function Video({ params }: PageProps) {
 <meta itemProp="description" content={`${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`} />
 <meta itemProp="duration" content={`${new Date(
             file.file_length
-        ).toIso8601()}`} />
+        ).videoObject.duration()}`} />
 <meta itemProp="thumbnailUrl" content={`${file.player_img}`} />
 <meta itemProp="embedURL" content={`https://filemoon.to/e/${file.file_code}`} />
 <meta itemProp="uploadDate" content={`${new Date(
