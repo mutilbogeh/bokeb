@@ -68,7 +68,7 @@ export default async function Video({ params }: PageProps) {
                 url: 'https://abgsquirt.pages.dev'},
         interactionStatistic: {
             '@type': `InteractionCounter`,
-                userInteractionCount: `${file.views}`,
+                userInteractionCount: `${file.file_views}`,
             interactionType: {
                 '@type': `ReadAction`,
                 target: `https://abgsquirt.pages.dev/v/${file.file_code}`
