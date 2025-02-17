@@ -3,13 +3,13 @@ import VideoCard from "../video-card";
 import doodstream from "@/lib/doodstream";
 
 const SearchCardList = async ({
-    query,
+    title,
     banner,
 }: {
-    query: string;
+    title: string;
     banner?: boolean;
 }) => {
-    const data = await doodstream.search({ query });
+    const data = await doodstream.search({ title });
 
     return (
         <div className="flex flex-col">
