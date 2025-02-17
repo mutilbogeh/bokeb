@@ -31,6 +31,15 @@ export default async function Video({ params }: PageProps) {
     return (
         <div className="grid col-span-full gap-4 md:gap-4 md:mx-10" itemProp="video" itemScope itemType="http://schema.org/VideoObject">
             {file.file_title} di {SITENAME} {file.file_created} {file.file_code} {file.player_img}
+                        <iframe
+                className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
+                src={`https://filemoon.to/e/${file.file_code}`}
+                scrolling="no"
+                title={file.title}
+                frameBorder={0}
+                allowFullScreen={true}
+            ></iframe>
+
             </div>
             );
 }
