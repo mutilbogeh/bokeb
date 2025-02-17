@@ -14,6 +14,46 @@ import doodstream from "@/lib/doodstream";
 type PageProps = {
     params: { [key: string]: string | string[] | undefined };
 };
+export async function generateMetadata(
+    { params }: PageProps,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const data = await doodstream.getFile({ file_code: params.id as string });
+     const upstream = await doodstream.getUpstream();
+    if (data.status !== 200) {
+        return {
+            title: data.msg,
+            description: "Something went wrong. Please try again later.",
+        };
+    }
+
+    const file = data.result[0];
+    const title = `${file.file_title}`;
+    const description = `${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`;
+    const image = file.splash_img;
+    const previousOgImages = (await parent).openGraph?.images || [];
+    const previousTwImages = (await parent).twitter?.images || [];
+
+    return {
+        title,
+        description,
+        twitter: {
+            title,
+            description,
+            images: [...previousTwImages, image],
+        },
+        openGraph: {
+            title,
+            description,
+            images: [...previousOgImages, image],
+            url: `/v/${file.file_code}`,
+            type: `article`,
+        },
+        alternates: {
+            canonical: `/v/${file.file_code}`,
+        },
+    };
+}
 
 export default async function Video({ params }: PageProps) {
     const data = await doodstream.getFile({ file_code: params.id as string });
