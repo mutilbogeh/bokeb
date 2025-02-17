@@ -83,7 +83,7 @@ class Doodstream {
         const data = await this.fetch(
             "/file/list",
             { title: query },
-            20
+            "per_page=20"
         );
         return data;
     }
