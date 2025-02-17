@@ -83,8 +83,7 @@ class Doodstream {
         const data = await this.fetch(
             "/file/list",
             { per_page: 20},
-            { search_term: query },
-            60
+            { search_term: query }
         );
         return data;
     }
