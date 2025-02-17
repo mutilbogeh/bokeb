@@ -28,8 +28,76 @@ export default async function Video({ params }: PageProps) {
         );
     }
         const file = data.result[0];
+        const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        headline: `${file.file_title}`,
+        image: file.player_img,
+        description: `${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`,
+        url: `https://abgsquirt.pages.dev/v/${file.file_code}`,
+        datePublished: new Date(
+            file.file_created + ".000Z"
+        ).toISOString(),
+        publisher: {
+            '@type': 'Organization',
+            name: `${SITENAME}`,
+            logo: 'https://abgsquirt.pages.dev/favicon.ico'},
+            author: {
+                '@type': 'Person',
+                name: 'admin',
+                url: 'https://abgsquirt.pages.dev'
+              }
+        }
+        const jsonLd2 = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: `${file.file_title}`,
+        image: file.player_img,
+        description: `${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`,
+        url: `https://abgsquirt.pages.dev/v/${file.file_code}`,
+        datePublished: new Date(
+            file.file_created + ".000Z"
+        ).toISOString(),
+        publisher: {
+            '@type': 'Organization',
+            name: `${SITENAME}`,
+            logo: 'https://abgsquirt.pages.dev/favicon.ico'},
+        author: {
+                '@type': 'Person',
+                name: 'admin',
+                url: 'https://abgsquirt.pages.dev'},
+        interactionStatistic: {
+            '@type': `InteractionCounter`,
+                userInteractionCount: `${file.views}`,
+            interactionType: {
+                '@type': `ReadAction`,
+                target: `https://abgsquirt.pages.dev/v/${file.file_code}`
+            }  
+        }
+        }
     return (
         <div className="grid col-span-full gap-4 md:gap-4 md:mx-10" itemProp="video" itemScope itemType="http://schema.org/VideoObject">
+<meta itemProp="author" content="admin" />
+<meta itemProp="name" content={`${file.file_title}`} />
+<meta itemProp="description" content={`${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`} />
+<meta itemProp="duration" content="P0DT0H8M43S" />
+<meta itemProp="thumbnailUrl" content={`${file.player_img}`} />
+<meta itemProp="embedURL" content={`https://doodstream.com/e/${file.file_code}`} />
+<meta itemProp="uploadDate" content={`${new Date(
+            file.file_created + ".000Z"
+        ).toISOString()}`} />
+	<section>
+        {/* Add JSON-LD to your page */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd2) }}
+        />
+        {/* ... */}
+        </section>
             {file.file_title} di {SITENAME} {file.file_created} {file.file_code} {file.player_img}
                         <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
