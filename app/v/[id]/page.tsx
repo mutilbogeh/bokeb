@@ -123,7 +123,7 @@ export default async function Video({ params }: PageProps) {
         <div className="grid col-span-full gap-4 md:gap-4 md:mx-10" itemProp="video" itemScope itemType="http://schema.org/VideoObject">
 <meta itemProp="author" content="admin" />
 <meta itemProp="name" content={`${file.file_title}`} />
-<meta itemProp="description" content={`${file.title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`} />
+<meta itemProp="description" content={`${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`} />
 <meta itemProp="duration" content="P0DT0H8M43S" />
 <meta itemProp="thumbnailUrl" content={`${file.player_img}`} />
 <meta itemProp="embedURL" content={`https://doodstream.com/e/${file.filecode}`} />
