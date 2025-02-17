@@ -1,14 +1,5 @@
-import {
-    CalendarIcon,
-    CubeIcon,
-    DownloadIcon,
-    LapTimerIcon,
-    RocketIcon,
-    Share1Icon,
-} from "@radix-ui/react-icons";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Metadata, ResolvingMetadata } from "next";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { humanDuration, humanSize } from "@/lib/utils";
 import { SITENAME } from "@/lib/constants";
 import Script from "next/script";
@@ -67,7 +58,6 @@ export async function generateMetadata(
 
 export default async function Video({ params }: PageProps) {
     const data = await doodstream.getFile({ file_code: params.id as string });
-    const upstream = await doodstream.getUpstream();
 
     if (data.status !== 200) {
         return (
