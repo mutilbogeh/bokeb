@@ -30,12 +30,6 @@ export default async function Video({ params }: PageProps) {
         const file = data.result[0];
     return (
         <div className="grid col-span-full gap-4 md:gap-4 md:mx-10" itemProp="video" itemScope itemType="http://schema.org/VideoObject">
-<meta itemProp="author" content="admin" />
-<meta itemProp="name" content={`${file.file_title}`} />
-<meta itemProp="description" content={`${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`} />
-<meta itemProp="duration" content="P0DT0H8M43S" />
-<meta itemProp="thumbnailUrl" content={`${file.player_img}`} />
-<meta itemProp="embedURL" content={`https://filemoon.to/e/${file.file_code}`} />
             {file.file_title} di {SITENAME} {file.file_created} {file.file_code} {file.player_img}
                         <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
