@@ -26,7 +26,7 @@ const SearchCardList = async ({
             )}
             {data.result.length ? (
                 <div className="grid grid-cols-2 gap-0 md:grid-cols-3 md:gap-3 xl:grid-cols-4">
-                    {data.result.map((video: any) => {
+                    {data.result.files.map((video: any) => {
                         return (
                             <VideoCard
                                 key={video.file_code}
