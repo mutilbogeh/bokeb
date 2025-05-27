@@ -1,36 +1,43 @@
-import { Card, CardContent } from "./ui/card";
+"use client";
 
-import { Badge } from "./ui/badge";
-import Link from "next/link";
-import React from "react";
-import Thumbnail from "./thumbnail";
+import Image from "next/image";
+import { useState } from "react";
 
-const VideoCard = ({ video }: any) => {
+const ImageLoader = ({ src, width, quality }: any) => {
+    return `https://wsrv.nl/?url=${src}&w=320&q=${
+        quality || 80
+    }&output=webp`;
+};
+
+const Thumbnail = ({
+    thumbnail,
+    title,
+}: {
+    thumbnail: string;
+    title: string;
+}) => {
+    const [imageIndex, setImageIndex] = useState(0);
+    const image = [thumbnail, "https://iili.io/J5ahFSa.png"];
+
+    const handleImageError = () => {
+        if (imageIndex === image.length - 1) return;
+        setImageIndex(imageIndex + 1);
+    };
+
     return (
-        <Card className="border-0 rounded-none md:border-[1px] md:rounded-md transform transition duration-200 md:hover:scale-[101%] md:hover:shadow-lg">
-            <div className="relative">
-                <Link
-                    href={`/v/${video.file_code}`}
-                    title={`Watch ${video.title}`}
-                    target="blank"
-                    >
-                <Thumbnail
-                    thumbnail={video.thumbnail}
-                    title={video.title}
-                />
-                </Link>
-            </div>
-            <CardContent className="p-1.5"><h3>
-                <Link
-                    href={`/v/${video.file_code}`}
-                    className="line-clamp-2 text-sm md:text-md font-semibold hover:text-primary focus:text-primary"
-                    title={`Watch ${video.title}`}
-                >
-                    {video.title}
-                </Link></h3>
-            </CardContent>
-        </Card>
+        <Image
+            className="!w-full !h-[110px] md:!h-[150px] lg:!h-[180px] object-cover rounded-none md:rounded-t-md"
+            alt={title}
+            title={title}
+            src={image[imageIndex]}
+            loader={ImageLoader}
+            width={320}
+            height={180}
+            quality={100}
+            onError={handleImageError}
+            priority
+        />
     );
 };
 
-export default VideoCard;
+export default Thumbnail;
