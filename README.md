@@ -1,2 +1,1 @@
-# bokeb
-bokeb
+# [bokeb](https://bokeb.pages.dev)
